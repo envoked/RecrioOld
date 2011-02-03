@@ -1,0 +1,88 @@
+8
+
+dir
+5
+svn+ssh://statc@slicehost/home/statc/repository/recrio/trunk/app/views/comments
+svn+ssh://statc@slicehost/home/statc/repository
+
+
+
+2007-07-26T06:58:32.623403Z
+5
+statc
+
+
+svn:special svn:externals svn:needs-lock
+
+list.rhtml
+file
+
+
+
+
+2007-07-01T20:09:34.136941Z
+886ba6b884b2783baed245d3713abdaa
+2007-07-26T06:58:32.623403Z
+5
+statc
+
+show.rhtml
+file
+
+
+
+
+2007-07-01T20:09:34.930836Z
+e7513fa1c73b901a6765a2deb73c7ee1
+2007-07-26T06:58:32.623403Z
+5
+statc
+
+_form.rhtml
+file
+
+
+
+
+2007-07-01T20:09:32.667309Z
+f6bf0276b34affb60b2e665d471df45d
+2007-07-26T06:58:32.623403Z
+5
+statc
+
+edit.rhtml
+file
+
+
+
+
+2007-07-01T20:09:33.463156Z
+cc4657b1cd359959d0a8d0ceae8009d2
+2007-07-26T06:58:32.623403Z
+5
+statc
+
+add.rhtml
+file
+
+
+
+
+2007-07-01T20:09:33.364530Z
+53e24d224730cc61ca1296747072ea06
+2007-07-26T06:58:32.623403Z
+5
+statc
+
+new.rhtml
+file
+
+
+
+
+2007-07-01T20:09:34.288299Z
+6247daa719801cc4a2dbc2795f99c509
+2007-07-26T06:58:32.623403Z
+5
+statc
+

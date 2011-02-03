@@ -1,0 +1,9 @@
+<form>
+Name:<input type="text" id="fileName" style="width:125px;"><br/>
+Format:
+<select id="fileFormat">
+<option value="jpeg">JPG</option>
+<option value="gif">GIF</option>
+<option value="png">PNG</option>
+<input type="button" class="button" value="Save" onclick="recrio.save($('fileName').value,$('fileFormat').value)">
+</form>

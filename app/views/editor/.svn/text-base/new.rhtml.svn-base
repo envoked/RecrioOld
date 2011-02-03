@@ -1,0 +1,9 @@
+<form id="dform" action="" method="GET">
+Size:<input type="text" id="width" style="width:60px;"> X <input type="text" id="height" style="width:60px;">
+<br/>
+Background:<select id="color">
+<option value="white">White</option>
+<option value="black">Black</option>
+<option value="current">Current</option>
+<input class="button" type="button" onclick="recrio.newBlank($('width').value,$('height').value,$('color').value)"value="Create"/>
+</form>

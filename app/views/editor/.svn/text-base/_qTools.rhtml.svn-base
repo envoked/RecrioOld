@@ -1,0 +1,10 @@
+<div class="smallBut" onclick="recrio.ui.showDig('new','New')"></div>
+<div class="smallBut"  style="background-position:-25px 0px;" onclick="recrio.ui.showDig('upload_form','Open')"></div>
+<div class="smallBut"  style="background-position:-50px 0px;" onclick="recrio.ui.showDig('open','Open')"></div>
+<div class="smallBut"  style="background-position:-75px 0px;" onclick="recrio.ui.showDig('saveForm','Save')"></div>
+<div class="smallBut"  style="background-position:-100px 0px;" onclick="recrio.applyFocused('enhance')"></div>
+<div class="smallBut"  style="background-position:0px -25px;" onclick="recrio.applyFocused('rotate',-90)"></div>
+<div class="smallBut"  style="background-position:-25px -26px;" onclick="recrio.applyFocused('rotate',90)"></div>
+<div class="smallBut"  style="background-position:-50px -25px;" onclick="recrio.addText()"></div>
+<div class="smallBut"  style="background-position:-75px -25px;" onclick="recrio.cropSelected()"></div>
+<div class="smallBut"  style="background-position:-100px -25px;"onclick="recrio.ui.showDig('resize','Resize')"></div>

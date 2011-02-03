@@ -1,0 +1,57 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><title>Recrio</title>
+<%= stylesheet_link_tag 'site' %>
+<%=javascript_include_tag 'mootools.v1.11.js'%>
+<%= auto_discovery_link_tag(:rss ,{:controller=>'blogs',:action  =>  'feed'}) %>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-211692-6";
+urchinTracker();
+</script>
+</head>
+<body>
+<div id="container">
+	<div id="top_bar">
+		<img src="/images/logo.png" alt="Recrio logo" style="float:left;position:relative"/>
+		<div id="menu">
+			<%=link_to_unless_current("Home",{:controller=>"site",:action=>"index"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<a href="/editor/">Editor</a>
+			<%=link_to_unless_current("About",{:controller=>"site",:action=>"about"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<%=link_to_unless_current("Blog",{:controller=>"blogs",:action=>"all"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<%=link_to_unless_current("Contact",{:controller=>"site",:action=>"contact"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+		</div>
+	</div>
+	<%if controller.action_name=="index" && controller.controller_name=="site"%>
+	<div id="mainHeader">
+		<div class="org">
+		<a href="/editor?url=http://recrio.net/images/mainSample.jpg"><img src="/images/mainSample.jpg" alt="Edit a sample image" border="0"/></a>		
+		</div>
+		<div class="org" style="width:350px;">
+		Recrio lets you edit your photos with the features of a desktop editor and the ease and
+		convenience of the web. Some features include:
+		<ul>
+			<li>Multiple layer support</li>
+			<li>Text layer support</li>
+			<li>New image support</li>
+			<li>Non destructive editing</li>	
+		</ul>
+		<input type="button" class="button" onclick="window.location='http://recrio.net/editor/'" value="Try"/>
+		</div>
+	</div>
+	<%end%>
+	<div id="content">
+		<%= yield  %>
+	</div>
+</div>
+<div id="footer">
+	<a href="/site/">Home</a>
+	<a href="/editor/">Editor</a>
+	<a href="/site/about">About</a>
+	<a href="/blogs/all">Blog</a>
+	<a href="/site/contact/">Contact</a>
+</div>
+</body>

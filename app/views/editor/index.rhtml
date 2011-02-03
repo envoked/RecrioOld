@@ -1,0 +1,112 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><title>Recrio-Online Image Editor</title>
+  <%= stylesheet_link_tag 'main.css' %>
+   <%=javascript_include_tag 'mootools.v1.11.js'%>
+  <%=javascript_include_tag 'rec.js'%>
+</head>
+<body>
+	<div id="workspace">
+	<div id="menu">
+		<img src="/images/barLogo.png" style="float:left;" alt="Recrio"/>
+		<div id="cpicker"></div>
+		<div id="menuDetails">
+		</div>
+		<div id="flattenMenu"><input type="button" class="button" onclick="recrio.flattenLayers();"value="Flatten"/></div>
+		<div id="menuMain">
+			<a href="http://recrio.net">Home</a>
+			<a href="/site/about/">About</a>
+			<a href="/blogs/all">Blog</a>
+			<a href="/site/contact/">Contact</a>
+			
+		</div>
+	</div>
+
+	<div id="sideBar">
+		<%=render :partial=> 'sidebar'%>
+	</div>
+<div id="filtDWrap">
+<div id="filterDetails">
+	<div id="previewOpt">
+	</div>
+	<img id="previewImg"/>
+</div>
+</div>	
+
+<div id="layer_pane" class="pane">
+<div id="layerTitle" class="paneTitle">
+<div id="hist_tab" onclick="recrio.ui.showTab('history')" class="tab">History</div>
+<div id="layer_tab" onclick="recrio.ui.showTab('layers')" class="tab">Layers</div>
+</div>
+<div class="paneOptions">
+<div class="org">
+Opacity:
+</div>
+<div id="track">
+<div id="handle">
+<img src="/images/handle.png" alt="Slide"/>
+</div>
+</div>
+<div class="org" style="width:20px;">
+<img src="/images/newlayer.png" style="cursor:pointer" alt="New Layer" onclick="recrio.ui.showDig('newlayer','New Layer')"/>
+</div>
+</div>
+<div class="paneContent">
+<div id="layers">
+<%= render :partial=> 'layers'%>
+</div>
+<div id="history">
+<%= render :partial=> 'history'%>
+</div>
+</div>
+</div>
+</div>
+<div id="text_pane" class="pane">
+<div id="textTitle" class="paneTitle">
+<div id="text_tab" onclick="recrio.ui.showTab('text')" class="tab">Text</div>
+<div id="image_tab" onclick="recrio.ui.showTab('imgfx')" class="tab">Image</div>
+</div>
+
+<div class="paneContent">
+<div id="text">
+<%= render :partial=> 'text'%>
+</div>
+<div id="imgfx">
+<%= render :partial=> 'image'%>
+</div>
+</div>
+</div>
+
+<div id="errorPane" style="display:none;">
+<div id="errorLeft"><img src="/images/error.png" alt="Error"/></div>
+<div id="errorMain">Error Goes here Silly</div>
+<input type="button" onclick="recrio.ui.hideError()" class="button" value="Close"/>
+</div>
+<div id="welcome" style="display:none">
+	<img src="/images/editorLogo.png" alt="Recrio Logo" /><br/>
+	<img src="/images/newBut.png" style="cursor:pointer;" alt="New Image" onclick="recrio.ui.showDig('new','New');recrio.ui.fadeEl('welcome')"/>
+	<img src="/images/openDBut.png"  style="cursor:pointer;" alt="Open image from disk" onclick="recrio.ui.showDig('upload_form','Upload Image');recrio.ui.fadeEl('welcome')"/>
+	<img src="/images/openWBut.png"  style="cursor:pointer;" alt="Open image from web" onclick="recrio.ui.showDig('open','Open from Web');recrio.ui.fadeEl('welcome')"/>
+	
+</div>
+<input type="hidden" id="slayer" value="0"/>
+
+</div>
+<iframe id="upIform" name="upIform" style="visibility:hidden;"></iframe>
+<img id="tempImg" src="/images/mainsample.jpg" style="display:none;"/>
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+  
+</script>
+<script type="text/javascript">
+_uacct = "UA-211692-6";
+urchinTracker();
+window.addEvent('domready', function(){
+  recrio=new Recrio();
+  onerror=recrio.err.log;
+  <%=@add%>
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"filters":[{"name":"Blur","parameters":[{"name":"Amount","min":1,"max":10}]}]}

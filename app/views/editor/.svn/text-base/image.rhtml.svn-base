@@ -1,0 +1,4 @@
+<li onclick="recrio.flattenLayers();">Flatten</li>
+<li onclick="recrio.ui.showDig('resize','Resize')">Resize</li>
+<li onclick="recrio.cropSelected();">Crop</li>
+<li onclick="recrio.ui.showDetails('rotate');">Rotate</li>

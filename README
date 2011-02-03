@@ -1,0 +1,3 @@
+== Recrio is an online image editor I developed in 2006. It's a Rails app (which was/is overkill for such an application) using Mootools (http:// mootools.net) for the javascript wizardly and ImageMagick(http://www.imagemagick.org/script/index.php) for all the heavy lifting.
+
+I'll be converting it to use Sinatra (http://sinatraerb.com) soon so this will become obsolete.

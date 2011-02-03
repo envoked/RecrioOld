@@ -1,0 +1,66 @@
+.button{
+	width:63px;
+	height:25px;
+	display:inline;
+	background:url('/images/buttonbg.png') no-repeat;
+	padding:2px 4px 2px 4px;
+	border:0px;
+	font-size:12pt;
+	color:#666666;
+	margin:5px 0px 5px 5px;
+	cursor:pointer;
+}
+
+.button:active{
+	background-position: -64px 0px;
+	padding-top:0px;
+	color:#333333;
+}
+
+select,input{
+	background: url('/images/inputbg.png') repeat-x;
+	height:20px;
+	border:1px solid #cccccc;
+	margin-right:4px;
+	color:#333333;
+	font-size:10pt;
+	margin:4px;
+}
+option{
+	background:#eeeeee;
+	padding-right:4px;
+}
+
+#rotateLeft{
+	width:34px;
+	height:34px;
+	cursor:pointer;
+	background:url('/images/rotateLeft.png') no-repeat;
+	float:left;
+	position:relative;
+}
+
+#rotateLeft:active,#rotateRight:active{
+	background-position: -36px 0px;
+}
+#rotateRight{
+	width:34px;
+	height:34px;
+	cursor:pointer;
+	background:url('/images/rotateRight.png') no-repeat;
+	float:left;
+	position:relative;
+}
+
+
+.smallBut{
+	position:relative;
+	float:left;
+	width:25px;
+	height:25px;
+	background:url('/images/smallBut.png') no-repeat;
+	cursor:pointer;
+}
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Recrio</title>
+<%= stylesheet_link_tag 'site' %>
+<%=javascript_include_tag 'mootools.v1.11.js'%>
+<%= auto_discovery_link_tag(:rss ,{:controller=>'blogs',:action  =>  'feed'}) %>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-211692-6";
+urchinTracker();
+</script>
+</head>
+<body style="background:none;">
+<div id="innerTop">
+	<%=link_to image_tag("innerLogo.png",:border=>'0'),{:controller=>'site',:action=>'index'}%>
+	<div id="innerMenu">
+			<%=link_to_unless_current("Home",{:controller=>"site",:action=>"index"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<a href="/editor/">Editor</a>
+			<%=link_to_unless_current("About",{:controller=>"site",:action=>"about"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<%=link_to_unless_current("Blog",{:controller=>"blogs",:action=>"all"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<%=link_to_unless_current("Contact",{:controller=>"site",:action=>"contact"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+		</div>
+</div>
+
+
+</body>
+<div id="container" >
+	<div id="innerContent" >
+	<%= yield  %>
+	</div>
+	<div id="footer">
+		<a href="/site/">Home</a>
+		<a href="/editor/">Editor</a>
+		<a href="/site/about">About</a>
+		<a href="/blogs/all">Blog</a>
+		<a href="/site/contact/">Contact</a>		
+	</div>		
+</div>
+</html>

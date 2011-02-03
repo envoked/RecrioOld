@@ -1,0 +1,19 @@
+xml.instruct! :xml, :version=>"1.0" 
+xml.rss(:version=>"2.0"){
+  xml.channel{
+    xml.title("Recrio News")
+    xml.link("http://www.recrio.net")
+    xml.description("News feed for the online image editor Recrio.")
+    xml.language('en-us')
+      for blog in @blogs
+        xml.item do
+          xml.title(blog.title)
+          xml.description(blog.body)      
+          xml.author("Adrian Wisernig")               
+          xml.pubDate(Time.at(blog["date"]).strftime("%b %d %Y"))
+          xml.link("http://www.recrio.net/blogs/view/" + blog["id"].to_s)
+          xml.guid("http:///www.recrio.net/blogs/view/" + blog["id"].to_s)
+        end
+      end
+  }
+}

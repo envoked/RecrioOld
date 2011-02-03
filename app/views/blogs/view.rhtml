@@ -1,0 +1,24 @@
+<h2><%=@blog["title"]%></h2>
+<h4>On <%=Time.at(@blog["date"]).strftime("%b %d %Y")%> by <%=@blog.author%></h4>
+<%=@blog["body"]%>
+<div id="comments">
+<% for comment in @comments%>
+<div class="comment">
+<h5><%=comment.from%> on <%=Time.at(comment["date"]).strftime("%b %d %Y")%></h5>
+	<%=comment["body"]%>
+</div>
+
+
+<%end%>
+</div>
+<div class="comment">
+	<h3>Post Comment</h3>
+	<form action="/comments/add/" id="subCom" method="POST">
+		Name:<input type="text" style="width:195px" name="comment[from]"/><br/>
+		Comment:<br/>
+		<textarea style="width:240px" name="comment[body]"></textarea><br/>
+		<input type="hidden" name="comment[blog_id]" value="<%=@blog.id%>"/>
+		<input type="button" class="button" value="Post"
+		onclick="$('subCom').send({update:'comments'});"/>
+	</form>
+</div>

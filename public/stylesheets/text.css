@@ -1,0 +1,19 @@
+body{
+	color:#ffffff;
+	font-family:Helvetica;
+	font-size:12px;
+}
+
+
+#submenu a{
+	font-size:14pt;
+	color:#cccccc;
+}
+
+#submenu a:hover{
+	color:#ffffff;
+}
+
+#pane_body ul{
+	list-style:none;
+}

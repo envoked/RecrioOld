@@ -1,0 +1,5 @@
+<a id="file" href="#">File</a>
+<a id="image" href="#">Image</a>
+<a id="filters" href="#">Filters</a>
+<a id="options" href="#">Options</a>
+<div id="cpicker"></div>

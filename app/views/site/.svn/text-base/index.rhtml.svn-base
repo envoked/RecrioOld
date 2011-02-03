@@ -1,0 +1,54 @@
+<div id="mainText">
+<h2>What do I need?</h2><p>
+Recrio works with Firefox, Opera, and Safari. I hope to fix the few bugs present in IE, but until then do yourself
+ a favor and download <a href="http://www.getfirefox.com" target="_blank">Firefox</a>.
+ 
+
+</p>
+<h2>Is it free?</h2><p>
+Yes. Currently Recrio is completly free with no ads.
+In the future, there might be a premium version or we
+might look for sponsorship.
+<h2>This is cool but I wish it could...</h2>
+Currently, we want to ensure that the basics are working
+perfectly. Once that's done we will introduce more complex
+features, but what good is being able import PSDs if you
+can't save the image. If you want to the able to use the
+newest features register as a beta tester and we'll contact
+you when they're available.</p>
+<h2>Ah it's broken</h2>
+<p>If you find a bug please report it and we'll get it fixed
+A.S.A.P. Also if you have any general feedback in general
+please contact us. We're not perfect and we make mistakes.
+</p>
+</div>
+<div class="pane">
+	<div class="paneTitle">
+		I want More
+	</div>
+	<div class="paneContent" id="register">
+		<form action="/site/adduser" method="POST" id="userForm">
+			Sign up to test the newest features before others<br/>
+			Email:<input type="text" style="width:200px;" name="user[email]"/><br/>
+			<input type="button" class="button" name="submit" value="Submit"
+			onclick="$('userForm').send({update:'register'});"
+			/>
+		</form>
+	</div>
+</div>
+	<div class="pane">
+	<div class="paneTitle">
+		Send Feedback
+	</div>
+	<div class="paneContent" id="feedback">
+		<form action="/site/sendmess" method="POST" id="feedForm">
+			Have any problems or feedback?<br/>
+			Email:<input type="text" style="width:175px;" name="email"/><br/>
+			<textarea name="message" style="width:210px;height:40px;"></textarea>
+			<input type="button" class="button" name="submit" value="Submit"
+			onclick="$('feedForm').send({update:'feedback'});"
+			/>
+		</form>
+	</div>
+</div>
+

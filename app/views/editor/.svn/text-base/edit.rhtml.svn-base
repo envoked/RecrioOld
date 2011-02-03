@@ -1,0 +1,4 @@
+<%@hash=params.sort%>
+<%@hash.each do|key,value|%>
+<%=key + "-value" %><br/>
+<%end%>

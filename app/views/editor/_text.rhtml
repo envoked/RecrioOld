@@ -1,0 +1,39 @@
+Text:<input type="text" id="fontValue" onchange="recrio.updateDLayer();" style="width:160px;"/>
+<br/>Font:<select id="fontFace" onchange="recrio.updateDLayer();">
+<%
+Dir.foreach("public/fonts") {|x|
+if x.length>2 then
+%>
+<option value="<%=x%>"><%=x[0..x.length-5]%></option>
+<%
+end
+}
+%>
+</select>Size:
+<select id="fontSize" onchange="recrio.updateDLayer();">
+<option value="10">10pt</option>
+<option value="12">12pt</option>
+<option value="14">14pt</option>
+<option value="16">16pt</option>
+<option value="18">18pt</option>
+<option value="20">20pt</option>
+<option value="22">22pt</option>
+<option value="24">24pt</option>
+<option value="26">26pt</option>
+<option value="28">28pt</option>
+<option value="36">36pt</option>
+<option value="48">48pt</option>
+<option value="72">72pt</option>
+</select>
+<br/>Style:
+<select id="fontStyle" onchange="recrio.updateDLayer();">
+<option value="normal">Normal</option>
+<option value="italic">Italic</option>
+<option value="oblique">Oblique</option>
+</select>
+<select id="fontWeight" onchange="recrio.updateDLayer();">
+<option value="400">Normal</option>
+<option value="700">Bold</option>
+<option value="900">Bolder</option>
+</select>
+<input class="button" type="button" onclick="recrio.addText();" value="New"/>

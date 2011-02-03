@@ -1,0 +1,94 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Recrio</title>
+<%= stylesheet_link_tag 'site' %>
+<%=javascript_include_tag 'mootools.v1.11.js'%>
+<%= auto_discovery_link_tag(:rss ,{:controller=>'blogs',:action  =>  'feed'}) %>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-211692-6";
+urchinTracker();
+</script>
+</head>
+<body>
+<div id="container">
+	<div id="top_bar">
+		<div id="menu">
+			<%=link_to_unless_current("Home",{:controller=>"site",:action=>"index"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<a href="/editor/">Editor</a>
+			<%=link_to_unless_current("About",{:controller=>"site",:action=>"about"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<%=link_to_unless_current("Blog",{:controller=>"blogs",:action=>"all"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+			<%=link_to_unless_current("Contact",{:controller=>"site",:action=>"contact"}){|name| '<a href="#" class="curPage">' + name + "</a>"}%>
+		</div>
+	</div>
+<div id="mainHeader">
+		<img src="images/logomain.png" class="org"/>
+		<a href="/editor?url=http://recrio.net/images/mainSample.jpg"><img border="0" src="images/mainSamp.jpg" class="org" style="margin-left:-20px;"/></a>
+		<div class="org" style="width:205px; padding-top:20px;">
+		Recrio lets you edit your photos with the features of a desktop editor and the ease and
+		convenience of the web. Some features include:
+		<ul>
+			<li>Multiple layer support</li>
+
+			<li>Text layer support</li>
+			<li>New image support</li>
+			<li>Non destructive editing</li>	
+		</ul>
+		<input type="button" class="button" onclick="window.location='http://recrio.net/editor/'" value="Try"/>
+		</div>
+	</div>
+	<div id="content">
+
+<div class="pane" style="margin-left:10px;">
+	<div class="paneTitle">
+		I want More
+	</div>
+	<div class="paneContent" id="register">
+		<form action="/site/adduser" method="post" id="userForm">
+			Sign up to test the newest features before others<br/>
+			Email:<input type="text" style="width:200px;" name="user[email]"/><br/>
+
+			<input type="button" class="button" name="submit" value="Submit"
+			onclick="$('userForm').send({update:'register'});"
+			/>
+		</form>
+	</div>
+</div>
+<div id="mainText">
+	Recrio is a free online image editor that gives you the features of a desktop
+	image editor, with the ease of a convenience of the web.
+	
+</div>
+	<div class="pane">
+	<div class="paneTitle">
+		Contact Us
+	</div>
+
+	<div class="paneContent" id="feedback">
+		<form action="/site/sendmess" method="POST" id="feedForm">
+
+			Have any problems or feedback?<br/>
+			Email:<input type="text" style="width:175px;" name="email"/><br/>
+			<textarea name="message" style="width:210px;height:40px;"></textarea>
+			<input type="button" class="button" name="submit" value="Submit"
+			onclick="$('feedForm').send({update:'feedback'});"
+			/>
+		</form>
+
+	</div>
+</div>
+	</div>
+
+<div id="footer">
+	<a href="/site/">Home</a>
+	<a href="/editor/">Editor</a>
+	<a href="/site/about">About</a>
+	<a href="/blogs/all">Blog</a>
+	<a href="/site/contact/">Contact</a>
+</div>
+</div>
+</body>
+</html>

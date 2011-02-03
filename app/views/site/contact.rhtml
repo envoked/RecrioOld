@@ -1,0 +1,12 @@
+If you find any bugs or have any comments or feedback please use the form below or <%=mail_to "contact@recrio.net" , "email", :encode=>"hex"%> us.<br/>
+<br/><br/>
+<div id="feedback">
+<form action="/site/sendmess" method="POST" id="feedForm">
+			Email:<input type="text" style="width:175px;" name="email"/><br/>
+			Subject:<input type="text" style="width:160px;" name="subject"/><br/>
+			<textarea name="message" style="width:210px;height:40px;"></textarea><br/>
+			<input type="button" class="button" name="submit" value="Submit"
+			onclick="$('feedForm').send({update:'feedback'});"
+			/>
+</form>
+</div>

@@ -1,0 +1,9 @@
+
+
+<form action="<%=url_for :controller=>'editor',:action=>'upload_img'%>" method="post" enctype="multipart/form-data" target="upIform" onsubmit="recrio.checkSource(this)">
+Web:<br/>
+<input type="text" id="imageWeb" style="width:100px"/><br/>
+File:<br/>
+<input type="file" name="img"/><br/>
+<input type="submit" value="Add"/>
+</form>

@@ -1,0 +1,3 @@
+<script type="text/javascript">
+window.parent.recrio.addImg('http://recrio.net/tmpimg/<%=@file_name%>');
+</script>

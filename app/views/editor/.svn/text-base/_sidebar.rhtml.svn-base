@@ -1,0 +1,21 @@
+		<div class="sideTitle">
+			QuickTools
+		</div>
+		<div class="sideCont">
+			<%= render_partial 'qTools'%>
+		</div>
+		<div class="sideTitle">
+			Effects
+		</div>
+		<div class="arrowCont sideCont"><div onclick="recrio.ui.scrollFilters(-10);" id="arrowUp"></div></div>
+		<div id="afilters" class="sideCont" style="padding:0;height:200px;width:156px;overflow:hidden;">
+		<%= render :partial=>'filters'%>
+		</div>
+<div class="arrowCont sideCont"><div id="arrowDown" onclick="recrio.ui.scrollFilters(10);"></div></div>
+<div class="sideTitle" id="dTitle">
+	Options
+</div>
+<div class="sideCont" id="dialog">
+
+</div>	
+</div>

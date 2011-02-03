@@ -1,0 +1,12 @@
+<%for blog in @blogs%>
+<h2><%=blog["title"]%></h2>
+<h4>On <%=Time.at(blog["date"]).strftime("%b %d %Y")%> by  <%=blog.author%></h4></h4>
+<%=blog["body"]%>
+<div class="commentBar">
+<%@numComments=Comments.count(:conditions=>["blog_id=?",blog["id"]]).to_s%>
+<%= link_to @numComments + " Comments >>",{:action=>"view",:id=>blog.id} %>
+</div>
+
+
+
+<%end%>

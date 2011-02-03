@@ -1,0 +1,8 @@
+		<div id="feedback">
+		<form action="/site/sendmess" method="POST" id="feedForm">
+			Email:<input type="text" style="width:100px;" name="email"/><br/>
+			<textarea name="message" style="width:210px;height:40px;"></textarea>
+			<input type="button" class="button" name="submit" value="Submit"
+			onclick="$('feedForm').send({update:'feedback'});"
+			/>
+		</form></div>

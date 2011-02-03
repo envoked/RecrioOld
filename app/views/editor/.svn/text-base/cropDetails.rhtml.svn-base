@@ -1,0 +1,7 @@
+<form>
+Size:
+<input type="text" id="cWidth" style="width:30px;"/>
+<input type="text" id="cHeight" style="width:30px;"/>
+<input type="button" class="button"  onclick="recrio.doCrop();" value="Crop"/>
+<input type="button" class="button"  onclick="recrio.cancelCrop();" value="Cancel"/>
+</form>

@@ -1,0 +1,6 @@
+<form id="dform" action="" method="GET">
+Width:<input type="text" id="nheight" onchange="recrio.getCorMes('height')" style="width:60px;"> px<br/>
+Height<input type="text" id="nwidth"  onchange="recrio.getCorMes('width')"style="width:60px;"> px<br/>
+Maintain Ratio?<input checked="true" id="ratio" type="checkbox" value="1"/><br/>
+<input type="button" onclick="recrio.applyFocused('resize',$('nheight').getValue() + ',' + $('nwidth').getValue() )"value="Resize"/>
+</form>

@@ -1,0 +1,9 @@
+<% for comment in @comments%>
+<div class="comment">
+	<%=comment.from%> Says:<br/>
+	<h5><%=Time.at(comment["date"]).strftime("%b %d %Y")%></h5>
+	<%=comment["body"]%>
+</div>
+
+
+<%end%>
